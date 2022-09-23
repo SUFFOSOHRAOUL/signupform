@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:login/screens/loginpage.dart';
+import '../reuseablewidget.dart';
 
 class loadingscreen extends StatefulWidget {
   const loadingscreen({Key? key}) : super(key: key);
@@ -12,6 +12,23 @@ class loadingscreen extends StatefulWidget {
 
 class _loadingscreenState extends State<loadingscreen> {
   @override
+  void loginscreen() async {
+    await Future.delayed(Duration(seconds: 3), () {
+      Navigator.push(
+        (context),
+        MaterialPageRoute(builder: (context) {
+          return loginPage();
+        }),
+      );
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loginscreen();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -40,14 +57,4 @@ class _loadingscreenState extends State<loadingscreen> {
       )),
     );
   }
-}
-
-Image logoWidget(String logoname) {
-  return Image.asset(
-    logoname,
-    fit: BoxFit.fitWidth,
-    width: 100,
-    height: 100,
-    color: Colors.orange,
-  );
 }
