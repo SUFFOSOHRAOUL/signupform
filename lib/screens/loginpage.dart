@@ -17,6 +17,7 @@ class _loginPageState extends State<loginPage> {
     return Scaffold(
       body: Container(
           child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
               //logo
@@ -29,25 +30,12 @@ class _loginPageState extends State<loginPage> {
                   Container(
                     margin: EdgeInsets.fromLTRB(10, 30, 10, 15),
                     child: Text(
-                      'Create Acount',
+                      'Login',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  reusableTextField(
-                    'First name',
-                    Icons.person_outline,
-                    false,
-                    controller,
-                  ),
-                  SizedBox(height: 10.0),
-                  reusableTextField(
-                    'Last name',
-                    Icons.person_outline,
-                    false,
-                    controller,
                   ),
                   SizedBox(height: 10.0),
                   reusableTextField(
@@ -59,13 +47,6 @@ class _loginPageState extends State<loginPage> {
                   SizedBox(height: 10.0),
                   reusableTextField(
                     'password',
-                    Icons.lock_outline,
-                    true,
-                    controller,
-                  ),
-                  SizedBox(height: 10.0),
-                  reusableTextField(
-                    'Confirm password',
                     Icons.lock_outline,
                     true,
                     controller,
@@ -95,7 +76,7 @@ class _loginPageState extends State<loginPage> {
                       ],
                     ),
                   ),
-                  signupButton('Sign Up', context, () {})
+                  signupButton('Login', context, () {})
                 ],
               ))
         ],
