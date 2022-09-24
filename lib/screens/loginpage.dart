@@ -41,6 +41,30 @@ class _loginPageState extends State<loginPage> {
                     Icons.person_outline,
                     false,
                     controller,
+                  ),
+                  reusableTextField(
+                    'Last name',
+                    Icons.person_outline,
+                    false,
+                    controller,
+                  ),
+                  reusableTextField(
+                    'Email Adress',
+                    Icons.person_outline,
+                    false,
+                    controller,
+                  ),
+                  reusableTextField(
+                    'password',
+                    Icons.person_outline,
+                    true,
+                    controller,
+                  ),
+                  reusableTextField(
+                    'Confirm password',
+                    Icons.person_outline,
+                    true,
+                    controller,
                   )
                 ],
               ))
