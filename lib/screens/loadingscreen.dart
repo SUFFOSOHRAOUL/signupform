@@ -35,19 +35,22 @@ class _loadingscreenState extends State<loadingscreen> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
-            children: [
-              Container(
-                  child: Row(
-                children: [
-                  Container(
-                    child: logoWidget('assets/images/logo.png'),
-                  ),
-                ],
-              )),
-            ],
-          ),
           Container(
+              child: Column(children: [
+            Text(
+              'Dairy',
+              style: TextStyle(fontSize: 60.0, color: Colors.orange),
+            ),
+            Text(
+              'Market',
+              style: TextStyle(
+                  fontSize: 50.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            )
+          ])),
+          Container(
+            padding: EdgeInsets.only(top: 40.0),
             child: SpinKitCircle(
               color: Colors.orange,
               size: 80.0,

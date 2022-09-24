@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 TextField reusableTextField(String text, IconData icon, bool ispassword,
-    TextEditingController controller) {
+    TextEditingController controller, String hinttext) {
   return TextField(
     controller: controller,
     obscureText: ispassword,
@@ -10,6 +10,10 @@ TextField reusableTextField(String text, IconData icon, bool ispassword,
     cursorColor: Colors.black,
     style: TextStyle(color: Colors.black.withOpacity(0.6)),
     decoration: InputDecoration(
+        hintText: hinttext,
+        hintStyle: TextStyle(
+          color: Colors.grey,
+        ),
         prefixIcon: Icon(icon, color: Colors.black),
         filled: true,
         fillColor: Colors.grey.withOpacity(0.3),
@@ -27,7 +31,6 @@ Image logoWidget(String logoname) {
     fit: BoxFit.fitWidth,
     width: 100,
     height: 100,
-    color: Colors.orange,
   );
 }
 
