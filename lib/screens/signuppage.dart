@@ -10,7 +10,11 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  TextEditingController controller = TextEditingController();
+  TextEditingController _firstName_controller = TextEditingController();
+  TextEditingController _lastName_controller = TextEditingController();
+  TextEditingController _email_controller = TextEditingController();
+  TextEditingController _password_controller = TextEditingController();
+  TextEditingController _confirmPassword_controller = TextEditingController();
   bool remember_me = false;
   @override
   Widget build(BuildContext context) {
@@ -52,19 +56,19 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                   ),
                   reusableTextField('First name', Icons.person_outline, false,
-                      controller, 'First name'),
+                      _firstName_controller, 'First name'),
                   SizedBox(height: 10.0),
                   reusableTextField('Last name', Icons.person_outline, false,
-                      controller, 'Last name'),
+                      _lastName_controller, 'Last name'),
                   SizedBox(height: 10.0),
                   reusableTextField('Email Adress', Icons.email_outlined, false,
-                      controller, 'Email Adress'),
+                      _email_controller, 'Email Adress'),
                   SizedBox(height: 10.0),
                   reusableTextField('password', Icons.lock_outline, true,
-                      controller, 'password'),
+                      _password_controller, 'password'),
                   SizedBox(height: 10.0),
                   reusableTextField('Confirm password', Icons.lock_outline,
-                      true, controller, 'Confirm password'),
+                      true, _confirmPassword_controller, 'Confirm password'),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

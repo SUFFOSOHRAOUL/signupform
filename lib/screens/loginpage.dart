@@ -12,7 +12,8 @@ class loginPage extends StatefulWidget {
 }
 
 class _loginPageState extends State<loginPage> {
-  TextEditingController controller = TextEditingController();
+  TextEditingController _emailcontroller = TextEditingController();
+  TextEditingController _passwordcontroller = TextEditingController();
   bool remember_me = false;
   @override
   Widget build(BuildContext context) {
@@ -41,10 +42,10 @@ class _loginPageState extends State<loginPage> {
                 ),
                 SizedBox(height: 10.0),
                 reusableTextField('Email Adress', Icons.email_outlined, false,
-                    controller, 'Email Adress'),
+                    _emailcontroller, 'Email Adress'),
                 SizedBox(height: 10.0),
                 reusableTextField('password', Icons.lock_outline, true,
-                    controller, 'password'),
+                    _passwordcontroller, 'password'),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
